@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>城市诗歌朗诵夜 · Poetry Reading Night</title>
+    <style>
+         /* 页面整体：背景渐变 + 居中布局（用 text-align 和 inline-block，不用 margin/padding/border） */
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background: linear-gradient(135deg,#f6ede3, #eee2d5);
+            color: #3b3025;
+            text-align: center;
+        }
+        .center {
+            text-align: center;
+        }
+        /* 必须声明的.page样式（修改背景色为奶油米黄） */
+        .page {
+            display: inline-block;
+            background-color: #FFF6D9;
+            box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+            text-align: left;
+            max-width: 720px;
+        }
+        /* 并集选择器：所有标题统一样式 */
+        h1, h2, h3, h4, h5, h6 {
+            color: #8B4513;
+            font-family: "Microsoft YaHei", serif;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #D2B48C;
+            padding-bottom: 8px;
+        }
+
+        /* ID选择器：重要提示强调样式 */
+        p#intro {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #CD5C5C;
+            background-color: #FFE4B5;
+            padding: 10px;
+            border-left: 4px solid #CD5C5C;
+        }
+
+        /* 后代选择器：div表格中的链接样式 */
+        div table a {
+            color: #4169E1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* 链接伪类：四种状态样式 */
+        a:link {
+            color: #4169E1;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #8A2BE2;
+        }
+        a:hover {
+            color: #FF6347;
+            text-decoration: underline;
+        }
+        a:active {
+            color: #FF4500;
+            text-decoration: none;
+        }
+
+        /* 带类名的链接样式 */
+        a.red {
+            color: #DC143C;
+            font-size: 1.1em;
+            margin-right: 20px;
+        }
+        a.blue {
+            color: #1E90FF;
+            font-size: 1.1em;
+        }
+
+        /* 伪元素：首字母和首行样式 */
+        p::first-letter {
+            font-size: 1.8em;
+            color: #8B4513;
+            font-weight: bold;
+            float: left;
+            margin-right: 5px;
+            line-height: 1;
+        }
+        div::first-line {
+            font-weight: 600;
+            color: #5D4037;
+        }
+
+        /* 表格样式优化 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #D2B48C;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #FFEBCD;
+            color: #8B4513;
+        }
+        tr:nth-child(even) {
+            background-color: #FFFAF0;
+        }
+        table tr:hover {
+            background-color: #eed8be;
+        }
+
+        /* 底部公告区样式 */
+        .notice {
+            background-color: #FFE4B5;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            color: #5D4037;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- ①顶部标题区 -->
+        <div>
+            <h1 align="center">城市诗歌朗诵夜 · Poetry Reading Night</h1>
+        </div>
+
+        <!-- ②活动介绍区 -->
+        <div>
+            <h2 id="intro" align="center">活动介绍</h2>
+            <p>城市的霓虹闪烁，总有一处角落适合安放诗意。我们的诗歌朗诵夜，是都市人逃离喧嚣的精神栖息地。在这里，没有身份的束缚，没有功利的追求，只有文字与声音的碰撞，情感与灵魂的共鸣。无论是古典诗词的典雅醇厚，还是现代诗歌的自由奔放，都能找到志同道合的倾听者。</p>
+            <p>每一场朗诵都是一次心灵的旅行。我们会精选城市主题相关的诗作，邀请大家分享自己钟爱的篇章，也鼓励原创诗歌的展示。或许你曾在清晨的公园偶遇一句诗，或许你在深夜的街头萌生一段感慨，这些都可以成为我们朗诵的素材。让我们用声音传递温度，用诗歌连接你我，在城市的夜色中编织一片诗意的天空。</p>
+            <p>古人云：“腹有诗书气自华”。诗歌不仅是文字的艺术，更是生活的调味剂。在快节奏的都市生活中，静下心来品读一首诗、朗诵一段文字，能让紧绷的神经得到舒缓，让浮躁的心灵回归平静。我们希望通过这场活动，让更多人感受诗歌的魅力，让诗歌成为日常生活的一部分，让城市因诗意而更加温暖。</p>
+            <p id="intro">重要提示：参与活动需提前准备一首自选诗歌（时长3-5分钟），可自带纸质稿或提前发送电子版至活动邮箱，现场提供朗诵舞台和简易音响设备。</p>
+        </div>
+
+        <!-- ③活动报名信息表格区 -->
+        <div>
+            <h3>报名信息登记表</h3>
+            <table>
+                <tr>
+                    <th>姓名</th>
+                    <th>联系电话</th>
+                    <th>朗诵篇目</th>
+                    <th>是否原创</th>
+                    <th>备注</th>
+                </tr>
+                <tr>
+                    <td>李明</td>
+                    <td>138****1234</td>
+                    <td>《再别康桥》</td>
+                    <td>否</td>
+                    <td><a href="https://baike.so.com/doc/5348783-26407855.html" target="_blank">查看原文</a></td>
+                </tr>
+                <tr>
+                    <td>王雅琪</td>
+                    <td>135****5678</td>
+                    <td>《城市的黎明》</td>
+                    <td>是</td>
+                    <td>需现场配乐</td>
+                </tr>
+                <tr>
+                    <td>张伟</td>
+                    <td>139****9012</td>
+                    <td>《将进酒》</td>
+                    <td>否</td>
+                    <td>多人合诵</td>
+                </tr>
+                <tr>
+                    <td>陈雨桐</td>
+                    <td>136****3456</td>
+                    <td>《霓虹下的独白》</td>
+                    <td>是</td>
+                    <td>无</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ④页面链接区 -->
+        <div>
+            <div class="center">
+                <a href="https://hongchenwusdnu.github.io/bookstore/job4.html" class="red" target="_blank">查看往期活动照片</a>
+                <a href="job3.html" class="blue" target="_blank" >在线咨询活动详情</a>
+            </div>
+        </div>
+
+        <!-- ⑤底部公告区 -->
+        <div class="notice">
+            <p>公告一：活动时间为每周六晚上19:00-21:30，地点位于城市文化中心三楼多功能厅，无需缴纳报名费，到场即可参与。<br>请提前15分钟到场签到，领取活动手册和饮品券。</p>
+            <p>公告二：本次活动欢迎所有诗歌爱好者参与，无论年龄、职业、朗诵水平，只要你热爱诗歌、愿意分享，都可以加入我们。<br>现场设置互动环节，参与者可投票评选“最具感染力朗诵者”，获奖选手将获得诗歌合集书籍一本。</p>
+            <p>公告三：为保证活动效果，请勿在现场大声喧哗、随意走动，手机请调至静音模式。<br>如需报名成为活动志愿者或分享嘉宾，可联系负责人微信：poetry_night2024，备注“报名志愿者”或“分享嘉宾”。</p>
+        </div>
+    </div>
+</body>
+</html>
